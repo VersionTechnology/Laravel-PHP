@@ -100,7 +100,6 @@ border: 2px solid;
 $(document).ready(function() {
 
 $('.btnsave').click( function () {
-alert($('.btnsave').attr('id'));
 var eid=$('.btnsave').attr('id');
 var fname=$('#txtfname').val();
 var lname=$('#txtlname').val();
