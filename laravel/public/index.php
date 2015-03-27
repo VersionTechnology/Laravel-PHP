@@ -73,22 +73,8 @@ DB::insert('insert into empdetails (FirstName, LastName,Age,Location) values (?,
 $results=DB::Select('Select * from empdetails');
 //print_r($results);
 }
-
-//DB::insert('insert into empdetails (FirstName, LastName,Age,Location) values (?, ?,?,?)', ['venkat', 's','26','Chennai']);
 $results=DB::Select('Select * from empdetails');
-//print_r($results);
-//print_r($results['Array'][0]['FirstName']);
 
-
-//$response->send();
-
-//$kernel->terminate($request, $response);
-//var_dump($results);
-///DB::insert('insert into posts (description, status) values (?, ?)', ['deva', 'Good']);
-//$results = DB::select('select * from posts where id = ?', array(1));
-
-///$results=DB::Select('Select * from posts');
-///print_r($results);
 
 ?>
 <html>
@@ -170,9 +156,12 @@ var table = $('#example').DataTable();
 <form method="post">
 <body>
 
-<div style="width:900px;background-color:#FCFAFB;border 1px solid">
-<div style="width:900px;background-color:#ccc;"></div>
-<div style="border:1px solid grey;width:300px;margin-left:270px;margin-top:20px;border-radius:5px;">
+<div style="width:1240px;background-color:#FCFAFB;border 1px solid">
+
+<div style="width:200px;background-color:#ccc;height:700px;"></div>
+
+<div style="margin-left:270px;margin-top:-680px;">
+<div style="border:1px solid grey;width:300px;border-radius:5px;margin-left:253px;">
 <div align="center" style="margin-top:7px;color:green;"><b>Employee details</b></div>
 <div style="margin-left:10px;margin-top:10px;">FirstName</div><div style="margin-left:100px;margin-top:-15px;"><input type="text" id="txtfname" ></div>
 <div style="margin-left:10px;margin-top:10px;">LastName</div><div style="margin-left:100px;margin-top:-15px;"><input type="text" id="txtlname" ></div>
@@ -196,20 +185,8 @@ var table = $('#example').DataTable();
 
 				<tbody style="width:500px;margin-left:30px;">
 		
-					<?php
-					
-//$con = mysql_connect('vts-sdu-2', 'root', 'mysql');
-//if (!$con) {
-//die('Could not connect: ' . mysql_error());
-//}
-//mysql_select_db("laraveldb", $con);
-//$result = mysql_query("SELECT FirstName, LastName,Age,Location FROM laraveldb.empdetails") or die ("Can't Connect");
-//while ($row = mysql_fetch_array($result))
-//{
-//if($row['symbol']==1)
-//$style="display:block;color:red";
-//else
-//$style="display:none;color:red";
+					<?php			
+
 
 foreach ($results as $result)
 {
@@ -223,6 +200,8 @@ foreach ($results as $result)
 			</table>
 
 </div>
+</div>
+
 </div>
 </body>
 </form>
